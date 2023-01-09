@@ -1,11 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Message from '../componets/message'
-import Question from '../componets/question'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
-  const messages = [1,2,3,4];
   return (
     <div className={styles.container}>
       <Head>
@@ -18,12 +15,6 @@ export default function Home() {
         <h1 className={styles.title}>
           Which front-end framework is better?
         </h1>
-
-        <div className={styles.grid}>
-          <Question name="React" ></Question>
-          <Question name="Flutter"></Question>
-        </div>
-        <Message messages={messages} ></Message>
       </main>
     </div>
   )

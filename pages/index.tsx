@@ -23,7 +23,7 @@ export default function Home() {
           <Question name="React" ></Question>
           <Question name="Flutter"></Question>
         </div>
-        <Message messages={messages} ></Message>
+        <Message></Message>
       </main>
     </div>
   )

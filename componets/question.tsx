@@ -1,12 +1,14 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import styles from '../styles/Home.module.css'
 
 export default function Question(props: {name: string;}) {
     const [count, setCount] = useState(0);
+
     return (
-        <div>
+        <div className={styles.quesBorder}>
             <h1> {props.name} </h1>
-            <label>{count}</label>
-            <p></p>
+            <h2>{count}</h2>
+            <br/>
             <button onClick={()=> setCount(count + 1)}>
                 Rate
             </button>

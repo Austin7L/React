@@ -1,46 +1,36 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Message() {
-    var messages = ["A","B","C"];
-    const listMessages = messages.map((message) =>
-        <li>{message}</li>
-    );
 
-    const [message, setMessage] = useState("");
-    const [text, setText] = useState("");
-
-    function doList() {
-
-        return "";
-    }
-
-    const [list, setList] = useState(messages);
     const [name, setName] = useState("");
+    // const [list, setList] = useState<string[]>([]); //type-script need to assignment type
+    const [list, setList] = useState(["我支持React", "Google才是王道", "Mark is Eevery thing"]) //give default values
 
     function handleChange(e: any) {
         setName(e.target.value);
     }
 
-    function handleAdd(e: any) {
-        if(name!="") {
-            messages.push(name);
-            console.log(messages);
+    function handleAdd() {
+        if (name != "") {
             setName("");
+            setList((prevList) => {
+
+                // const newArray = [...prevList, name];
+                // return newArray;
+
+                return [...prevList, name];
+            })
         }
     }
 
     return (
         <div>
-            <input id="ip1" type="text" onChange={handleChange} />
-            {/* <button onClick={() => setMessage(doList())}>submit</button> */}
+            <input value={name} type="text" onChange={handleChange} />
             <button type="button" onClick={handleAdd}>
                 Add
             </button>
-            {/* <ul>{message}</ul> */}
             <ul>
-                {list.map((item) => (
-                    <li>{item}</li>
-                ))}
+                {list.map((item) => { return <li key={item}>{item}</li> })}
             </ul>
         </div>
     )

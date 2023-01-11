@@ -8,10 +8,10 @@ export default function Question(props: {name: string;}) {
         <div className={styles.quesBorder}>
             <h1> {props.name} </h1>
             <h2>{count}</h2>
-            <br/>
             <button onClick={()=> setCount(count + 1)}>
                 Rate
             </button>
         </div>
+        
     )
 }

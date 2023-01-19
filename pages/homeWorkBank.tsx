@@ -4,13 +4,10 @@ import Question from '../componets/question'
 import styles from '../styles/Home.module.css'
 import Labels from '../componets/Labels'
 import money from '../hooks/money'
+import Bank from '../componets/bank'
 
 export default function bank() {
   return (
-    <h1>
-      <Labels title="123" />
-      <Labels title={money} />
-      <Labels title="元" />
-    </h1>
+    <Bank />
   )
 }

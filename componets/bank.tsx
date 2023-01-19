@@ -3,10 +3,15 @@ import styles from "../styles/Home.module.css";
 
 const initState = {
     money: 1000000,
+    history: []
 }
 
 type BankState = {
-    money: number
+    money: number,
+    history: {
+        operation: string;
+        ammount: number
+    }[]
 }
 
 type BankAction =
@@ -18,12 +23,12 @@ const reduser = (state: BankState, action: BankAction) => {
 
     switch (action.type) {
         case "DEPOSITE":
-            return { ...state, money: state.money + action.payload }
+            return { ...state, money: state.money + action.payload, history: [...state.history, {operation: "DEPOSITE", ammount: action.payload}] }
 
         case "WITHDRAW":
-            return { ...state, money: state.money - action.payload }
-            defalut:
-            return state;
+            return { ...state, money: state.money - action.payload, history: [...state.history, {operation: "WITHDRAW", ammount: action.payload}] }
+        defalut:
+        return state;
     }
 }
 
@@ -48,6 +53,16 @@ const Bank = () => {
             <br />
             <button onClick={(e) => {onDeposite()}}>存入</button>
             <button onClick={(e) => {onWithDraw()}}>領出</button>
+            <br />
+            <ul className={styles.description}>
+                {state.history.map((item, index) => {
+                    return (
+                        <li key={index}>
+                            {item.operation} : {item.ammount}
+                        </li>
+                    );
+                })}
+            </ul>
         </div>
     )
 }

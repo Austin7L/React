@@ -5,8 +5,13 @@ import Main from '../componets/main'
 import styles from '../styles/Home.module.css'
 import React, { useState, useEffect, useCallback } from 'react';
 import QuestBox from '../componets/questBox'
+import { useBackgroundBlue } from '../hooks/useBackgroundBlue';
+
+
 
 export default function Home() {
+  useBackgroundBlue();
+  
   return (
     <div className={styles.container}>
       <Head>

@@ -3,8 +3,12 @@ import Footer from '../componets/footer'
 import Header from '../componets/header'
 import Main from '../componets/main'
 import styles from '../styles/Home.module.css'
+import { useBackgroundBlue } from '../hooks/useBackgroundBlue';
 
-export default function Home() {
+
+
+export default function About() {
+  useBackgroundBlue();
   return (
     <div className={styles.container}>
       <Head>

@@ -27,7 +27,7 @@ const reduser = (state: BankState, action: BankAction) => {
 
         case "WITHDRAW":
             return { ...state, money: state.money - action.payload, history: [...state.history, {operation: "WITHDRAW", ammount: action.payload}] }
-        defalut:
+        default:
         return state;
     }
 }

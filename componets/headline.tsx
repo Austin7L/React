@@ -6,7 +6,7 @@ interface Props{
   title?: string;
 }
 
-export default function Headline({page, title=""}:Props) {
+export default function Headline({page, title=""}:Props) { //title為可選參數，可以給初始值
   return (
     <>
       <h1 className={styles.title}>
@@ -17,6 +17,6 @@ export default function Headline({page, title=""}:Props) {
         Get started by editing{' '}
         <code className={styles.code}>pages/{page}.js</code>
       </p>
-      </>
+    </>
   )
 }

@@ -1,9 +1,6 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Footer from '../componets/footer'
 import Header from '../componets/header'
-import Headline from '../componets/headline'
-import Links from '../componets/links'
 import Main from '../componets/main'
 import styles from '../styles/Home.module.css'
 

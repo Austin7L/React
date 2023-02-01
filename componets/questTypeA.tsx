@@ -1,6 +1,6 @@
 import styles from '../styles/Home.module.css';
 
-export default function QuestTypeA({ count, handleClick, text, isShow, array, handleText, handleIsShow, handleAdd }: any) {
+const QuestTypeA = ({ count, handleClick, text, isShow, array, handleText, handleIsShow, handleAdd }: any) => {
   return(
     <div className={styles.center}>
       <h2>{count}</h2>
@@ -20,3 +20,5 @@ export default function QuestTypeA({ count, handleClick, text, isShow, array, ha
     </div>
   )
 }
+
+export default QuestTypeA;

@@ -1,6 +1,6 @@
 import styles from '../styles/Home.module.css';
 
-export default function Links() {
+const Links = () => {
   const items = [
     {
       href: "https://nextjs.org/docs", title: "Documentation →", desc: "Find in-depth information about Next.js features and API."
@@ -29,3 +29,5 @@ export default function Links() {
     </div>
   )
 }
+
+export default Links;

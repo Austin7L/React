@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from '../styles/Home.module.css'
 
-export default function Question(props: {name: string;}) {
+const Question = (props: {name: string;}) => {
     const [count, setCount] = useState(0);
 
     return (
@@ -12,6 +12,7 @@ export default function Question(props: {name: string;}) {
                 Rate
             </button>
         </div>
-        
     )
 }
+
+export default Question;

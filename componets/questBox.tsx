@@ -6,7 +6,7 @@ import { useCounter } from "../hooks/useCounter";
 import { useInputText } from "../hooks/useInputText";
 
 
-export default function QuestBox() {
+const QuestBox = () => {
     const counter = useCounter();
     const addText = useInputText();
 
@@ -19,3 +19,5 @@ export default function QuestBox() {
       </main>
     )
 }
+
+export default QuestBox;

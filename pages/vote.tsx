@@ -3,7 +3,7 @@ import Message from '../componets/message'
 import Question from '../componets/question'
 import styles from '../styles/Home.module.css'
 
-export default function HomeWork1() {
+const Vote = () => {
   return (
     <div className={styles.border}>
       <Head>
@@ -27,3 +27,5 @@ export default function HomeWork1() {
     </div>
   )
 }
+
+export default Vote;

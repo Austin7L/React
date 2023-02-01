@@ -9,7 +9,7 @@ import { useBackgroundBlue } from '../hooks/useBackgroundBlue';
 
 
 
-export default function Home() {
+const Home = () => {
   useBackgroundBlue();
   
   return (
@@ -27,3 +27,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default Home;

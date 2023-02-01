@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-export default function Message() {
+const Message = () => {
 
     const [name, setName] = useState("");
     // const [list, setList] = useState<string[]>([]); //type-script need to assignment type
@@ -35,3 +35,5 @@ export default function Message() {
         </div>
     )
 }
+
+export default Message;

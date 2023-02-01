@@ -8,7 +8,7 @@ interface Props {
   title?: string;
 }
 
-export default function Main({ page, title = "default" }: Props) {
+const Main = ({ page, title = "default" }: Props) => {
 
   useEffect(() => {
     //用於元件第一次載入時
@@ -27,3 +27,5 @@ export default function Main({ page, title = "default" }: Props) {
     </main>
   )
 }
+
+export default Main;

@@ -1,6 +1,5 @@
 import { useCallback, useState } from "react";
 
-
 export const useInputText = () => {
     const [text, setText] = useState("");
     const [isShow, setIsShow] = useState(false);

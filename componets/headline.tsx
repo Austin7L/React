@@ -6,7 +6,7 @@ interface Props{
   title?: string;
 }
 
-export default function Headline({page, title=""}:Props) { //title為可選參數，可以給初始值
+const Headline = ({page, title=""}:Props) => { //title為可選參數，可以給初始值
   return (
     <>
       <h1 className={styles.title}>
@@ -20,3 +20,5 @@ export default function Headline({page, title=""}:Props) { //title為可選參�
     </>
   )
 }
+
+export default Headline;

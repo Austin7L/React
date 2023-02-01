@@ -1,7 +1,7 @@
 import styles from '../styles/Home.module.css';
 import { useMemo } from 'react';
 
-export default function QuestTypeB({ count, doubleCount, handleClick, text, isShow, array, handleText, handleIsShow, handleAdd }: any) {
+const QuestTypeB = ({ count, doubleCount, handleClick, text, isShow, array, handleText, handleIsShow, handleAdd }: any) => {
 
   return(
     <div className={styles.center}>
@@ -22,3 +22,5 @@ export default function QuestTypeB({ count, doubleCount, handleClick, text, isSh
   </div>
   )
 }
+
+export default QuestTypeB;

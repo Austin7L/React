@@ -5,9 +5,7 @@ import Main from '../componets/main'
 import styles from '../styles/Home.module.css'
 import { useBackgroundBlue } from '../hooks/useBackgroundBlue';
 
-
-
-export default function About() {
+const About = () => {
   useBackgroundBlue();
   return (
     <div className={styles.container}>
@@ -23,3 +21,5 @@ export default function About() {
     </div>
   )
 }
+
+export default About;

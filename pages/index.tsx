@@ -6,12 +6,12 @@ import styles from '../styles/Home.module.css'
 import React, { useState, useEffect, useCallback } from 'react';
 import QuestBox from '../componets/questBox'
 import { useBackgroundBlue } from '../hooks/useBackgroundBlue';
-
-
+import { pageInfo, PageContext } from '../componets/pageContext';
 
 const Home = () => {
+
   useBackgroundBlue();
-  
+
   return (
     <div className={styles.container}>
       <Head>
@@ -21,8 +21,9 @@ const Home = () => {
       </Head>
       <Header />
       <QuestBox />
-      
-      <Main page="index" />
+      <PageContext.Provider value={pageInfo.index}> {/* 將需要傳參數的元件包起來 */}
+        <Main />
+      </PageContext.Provider>
       <Footer />
     </div>
   )

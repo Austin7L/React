@@ -8,21 +8,21 @@ interface Props {
   title?: string;
 }
 
-const Main = ({ page, title = "default" }: Props) => {
+const Main = () => {
 
   useEffect(() => {
     //用於元件第一次載入時
     document.body.style.backgroundColor = "lightblue";
 
     //用於元件被消滅要處理的事情，當離開元件需要進行重置時可用
-    return() => {
+    return () => {
       document.body.style.backgroundColor = "";
     }
-  },[])
+  }, [])
 
   return (
     <main className={styles.main}>
-      <Headline page={page} />
+      <Headline />
       <Links />
     </main>
   )

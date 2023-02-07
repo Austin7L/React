@@ -1,12 +1,12 @@
 import styles from '../styles/Home.module.css';
 import { useMemo } from 'react';
 
-const QuestTypeB = ({ count, doubleCount, handleClick, text, isShow, array, handleText, handleIsShow, handleAdd }: any) => {
+const QuestTypeB = ({ countAbout, handleAboutClick, handleClick, text, isShow, array, handleText, handleIsShow, handleAdd }: any) => {
 
-  return(
+  return (
     <div className={styles.center}>
-      <h2>{doubleCount}</h2>
-      <button onClick={handleClick}>加1</button>
+      <h2>{countAbout}</h2>
+      <button onClick={handleAboutClick}>加1</button>
       <br />
       <button onClick={handleIsShow}>顯示輸入框</button>
       <br />
@@ -15,11 +15,11 @@ const QuestTypeB = ({ count, doubleCount, handleClick, text, isShow, array, hand
       <button onClick={handleAdd}>加入</button>
       <br />
       <ul>
-          {array.map((item: any, index: number) => {
+        {array.map((item: any, index: number) => {
           return <li key={index}>{item}</li>
-          })}
+        })}
       </ul>
-  </div>
+    </div>
   )
 }
 

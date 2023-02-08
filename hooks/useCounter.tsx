@@ -9,12 +9,23 @@ export const useCounter = () => {
     return count * 2;
   }, [count])
 
-  //減少畫面渲染
-  const handleClick = useCallback((e: React.MouseEvent) => {
-    setCount((count: number) => { return count + 1 });
+  // //減少畫面渲染
+  // const handleClick = useCallback((e: React.MouseEvent) => {
+  //   setCount((count: number) => { return count + 1 });
 
-    CounterDispatch({ type: "VOTE", payload: 1 });
-  }, [count])
+  //   CounterDispatch({ type: "VOTE", payload: 1 });
+  // }, [count])
+
+  const handleClick = useCallback((e: React.MouseEvent) => {
+    if (CounterState.totalCount < 20) {
+      setCount((count: number) => {
+        return count + 1;
+      });
+      CounterDispatch({ type: "VOTE", payload: 1 });
+    } else {
+      alert("已超過totalCount上限");
+    }
+  }, [CounterState.totalCount]);
 
   //處理複雜的生命週期
   useEffect(() => {

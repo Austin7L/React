@@ -7,17 +7,17 @@ import { useInputText } from "../hooks/useInputText";
 
 
 const QuestBox = () => {
-    const counter = useCounter();
-    const addText = useInputText();
+  const counter = useCounter();
+  const addText = useInputText();
 
-    return (
-      <main className={styles.main}>
-        <div className={styles.grid}>
-          <QuestTypeA className={styles.card} {...counter} {...addText} />
-          <QuestTypeB className={styles.card} {...counter} {...addText} />
-        </div>
-      </main>
-    )
+  return (
+    <main className={styles.main}>
+      <div className={styles.grid}>
+        <QuestTypeA />
+        <QuestTypeB />
+      </div>
+    </main>
+  )
 }
 
 export default QuestBox;

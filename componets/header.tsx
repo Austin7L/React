@@ -8,6 +8,7 @@ const Header = () => {
       <Link className={styles.header} href="/about">About</Link>
       <Link className={styles.header} href="/vote">Vote</Link>
       <Link className={styles.header} href="/bank">Bank</Link>
+      <Link className={styles.header} href="/totalCount">TTC</Link>
     </header>
   )
 }
